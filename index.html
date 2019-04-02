@@ -27,6 +27,27 @@
       100% { background-color: green; }
     }
 
+    footer {
+      position: fixed;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
+    }
+
+    footer, p, a {
+      font-size: 0.9em;
+      background: inherit;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-filter: invert(1) grayscale(1);
+      filter: invert(1) grayscale(1);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
     #container {
       background: inherit;
       position: absolute;
@@ -74,6 +95,10 @@
       <div id="cat-fact"></div>
       <input id="get-button" type="button" value="NEW FACT!">
     </div>
+
+    <footer>
+      <p><a href="https://seanbehan.dev">Sean Behan</a> - <a href="https://github.com/codebam/catfacts">Source</a></p>
+    </footer>
 
     <script>
       const CORSify = (url) => 'https://bypasscors.herokuapp.com/api/?url=' + encodeURIComponent(url);
